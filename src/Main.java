@@ -6,11 +6,11 @@ public class Main {
         int stepBonus = 100;//шаг начисления бонуса
         int bonus;
         if (replenishAccount >= 1000) {
-           bonus = replenishAccount/stepBonus;
+            bonus = replenishAccount / stepBonus;
         } else {
             bonus = 0;
         }
-int totalAmount = initialAccount + replenishAccount + bonus;//общий счет
+        int totalAmount = initialAccount + replenishAccount + bonus;//общий счет
 
         System.out.println("Баланс " + totalAmount + " руб.");
         System.out.println("Счет пополнен на  " + replenishAccount + " руб.");
