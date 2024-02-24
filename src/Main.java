@@ -2,20 +2,18 @@ public class Main {
     public static void main(String[] args) {
 
         int initialAccount = 100; //начальный счет
-        int replenishAccount = 111; //клиент попполнил счет на
-        int bonus = (replenishAccount / 100);//количество бонусв
-        int finalScore = (initialAccount + replenishAccount);//итоговый счет
+        int replenishAccount = 1000; //сумма пополнения
+        int stepBonus = 100;//шаг начисления бонуса
+        int bonus;
         if (replenishAccount >= 1000) {
-            System.out.println("Итоговый счет:");
-            System.out.println(finalScore);
-            System.out.println("Количество бонусов:");
-            System.out.println(replenishAccount);
+           bonus = replenishAccount/stepBonus;
         } else {
-            System.out.println("Итоговый счет:");
-            System.out.println(finalScore);
-            System.out.println("Количество бонусов:");
-            System.out.println("0");
+            bonus = 0;
         }
+int totalAmount = initialAccount + replenishAccount + bonus;//общий счет
 
+        System.out.println("Баланс " + totalAmount + " руб.");
+        System.out.println("Счет пополнен на  " + replenishAccount + " руб.");
+        System.out.println("Бонус составил " + bonus + " руб.");
     }
 }
